@@ -1,5 +1,14 @@
 body{
 
+    /* bet you cant guess what this does */
     background-color: pink;
 
+}
+
+/* for the calendar table */
+table {
+
+    border-collapse: none;
+    background-color:rgb(253, 231, 247);
+    color: black;
 }
