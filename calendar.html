@@ -7,115 +7,133 @@
     <link rel="stylesheet" href="calendar.css">
 </head>
 <body>
-    <!-- the title -->
-    <h1 style="color: hotpink">HenHacks Calendar</h1>
-    <!-- month -->
-    <h2 style="color:hotpink">March 2025</h2>
+
+<!-- the div tags are for dividing parts of code -->
+<!-- it makes coding in the css file easier -->
+<div style=""display: flex; gap:20px>
+
+    <!-- table -->
+    <div>
+        <h1 style="color: hotpink">HenHacks Calendar</h1>
+        <h2 style="color:hotpink">March 2025</h2>
 
 
     <!-- table for the calendar -->
     <!-- code below for the table is derived from geeks4geeks -->
-    <table bgcolor="white" cellspacing="10" cellpadding="10" >
+        <table bgcolor="white" cellspacing="10" cellpadding="10" >
 
     <!-- thead is used to enter the header of the table -->
-    <thead>
+        <thead>
 
         <!-- tr is used to enter rows in the table -->
-        <tr>
+            <tr>
 
             <!-- days of the week as columns -->
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
 
-        </tr>
+            </tr>
 
         <!-- tbody is used to enter the body of the table -->
-        <tbody>
+            <tbody>
 
             <!-- tr is used to enter rows in the table -->
-            <tr>
+                <tr>
 
                 <!-- td is used to enter data in the table -->
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="date-btn" onclick="dateClicked(1)">1</button></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
+                    <td><button class="date-btn" onclick="dateClicked(2)">2</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(3)">3</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(4)">4</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(5)">5</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(6)">6</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(7)">7</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(8)">8</button></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
+                    <td><button class="date-btn" onclick="dateClicked(9)">9</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(10)">10</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(11)">11</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(12)">12</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(13)">13</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(14)">14</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(15)">15</button></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
-                <td>22</td>
-            </tr>
+                    <td><button class="date-btn" onclick="dateClicked(16)">16</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(17)">17</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(18)">18</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(19)">19</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(20)">20</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(21)">21</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(22)">22</button></td>
 
-            <tr>
+                </tr>
 
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
+                <tr>
 
-            </tr>
+                    <td><button class="date-btn" onclick="dateClicked(23)">23</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(24)">24</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(25)">25</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(26)">26</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(27)">27</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(28)">28</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(29)">29</button></td>
 
-            <tr>
+                </tr>
 
-                <td>30</td>
-                <td>31</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <tr>
 
-            </tr>
+                    <td><button class="date-btn" onclick="dateClicked(30)">30</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(31)">31</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
 
+                </tr>
 
+            </tbody>
 
-        </tbody>
+        </thead>
 
-    </thead>
+    </div>
+
+    <!-- todo list -->
+    <div>
+
+        <input type="text" id="todo" placeholder="Enter your task here">
+        <button onclick="addTodo()">Add</button>
+
+        <ul id="todo-list">
+        </ul>
+
+    </div>
 </table>
+</div>
 
 <form action="/url" method="GET">
     <label for="username"> Enter Todo info:</label>
