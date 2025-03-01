@@ -123,26 +123,21 @@
     </div>
 
     <!-- todo list -->
-    <div>
 
-        <input type="text" id="todo" placeholder="Enter your task here">
-        <button onclick="addTodo()">Add</button>
-
-        <ul id="todo-list">
-        </ul>
-
-    </div>
+    <form action="/url" method="GET">
+        <label for="username"></label>
+            <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
+            <input type="date" id="date" name="date">
+        <button type="submit">Submit</button>  
+    </form>
+    
 </table>
 </div>
-
 <form action="/url" method="GET">
-    <label for="username"> Enter Todo info:</label>
-        <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required>
-        <input type="date" id="date" name="date">
-        <input type="text" id="Desc" name="Desc">
+    <label for="username"></label>
+        <input type="text" id="Desc" name="Desc" placeholder="Enter Description">
     <button type="submit">Submit</button>  
 </form>
-
 </body>
 
 <script src="calendar.js"></script>
