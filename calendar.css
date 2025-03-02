@@ -1,6 +1,6 @@
 h1 {
 
-    padding-left:500px;
+    align-items: center;
     
 }
 
@@ -41,14 +41,15 @@ th {
 .calendar-header {
 
     padding-left: 238px;
+    position: fixed;
 
 }
 
 .task-header {
 
-    padding-right: 10px;
-    position: fixed;
-
+    padding-left: 800px;
+    
+    
 }
 
 .container {
@@ -61,9 +62,9 @@ th {
 
 .todo-list{
 
-    width: 300px;
-    border-radius: 10px;
-    padding: 20px;
+    width: 350px;
+    padding-left: 200px;
+
 
 }
 
