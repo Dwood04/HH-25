@@ -14,7 +14,27 @@ function addTodo() {
   TaskList.push(todo);
   return false;
 }
+function removeTodo() {
+  TaskList.pop();
+  return false;
+}
+function displayAllTodos() {
+  var output = document.getElementById("todoOutput");
+  if (!output) {
+    output = document.createElement("div");
+    output.id = "todoOutput";
+    document.body.appendChild(output);
+  }
 
+  var html = "<h2>Todo List</h2><ul>";
+  for (var i = 0; i < TaskList.length; i++) {
+    html += "<li><strong>Title:</strong> " + TaskList[i].title + 
+            " <strong>Date:</strong> " + TaskList[i].date + 
+            " <strong>Description:</strong> " + TaskList[i].desc + "</li>";
+  }
+  html += "</ul>";
+  output.innerHTML = html;
+}
 function myFunction(){
   if(TaskList.length > 0){
     document.body.style.backgroundColor = "lightblue";
