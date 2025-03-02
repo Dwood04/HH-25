@@ -14,8 +14,16 @@
 
     <!-- table -->
     <div class="calendar">
+
         <h1 style="color: hotpink">HenHacks Calendar</h1>
-        <div class="HELPME"><h2 style="color:hotpink">March 2025</h2></div>
+        <div class="headers">
+        <div class="calendar-header">
+            <h2 style="color:hotpink">March 2025</h2>
+        </div>
+        <div class="task-header">
+            <h2 style="color:hotpink">Tasks</h2>
+        </div>
+        </div>
         
 
 
@@ -55,25 +63,25 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><button class="date-btn" onclick="dateClicked(1)">1</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(1)">01</button></td>
 
                 </tr>
 
                 <tr>
 
-                    <td><button class="date-btn" onclick="dateClicked(2)">2</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(3)">3</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(4)">4</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(5)">5</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(6)">6</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(7)">7</button></td>
-                    <td><button class="date-btn" onclick="dateClicked(8)">8</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(2)">02</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(3)">03</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(4)">04</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(5)">05</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(6)">06</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(7)">07</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(8)">08</button></td>
 
                 </tr>
 
                 <tr>
 
-                    <td><button class="date-btn" onclick="dateClicked(9)">9</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(9)">09</button></td>
                     <td><button class="date-btn" onclick="dateClicked(10)">10</button></td>
                     <td><button class="date-btn" onclick="dateClicked(11)">11</button></td>
                     <td><button class="date-btn" onclick="dateClicked(12)">12</button></td>
@@ -130,6 +138,7 @@
 
 
     <div class="todoList">
+    <div class="textBox">
     <form action="/url" method="GET">
         <label for="username"></label>
             <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
@@ -137,11 +146,12 @@
         <button type="submit">Submit</button>  
     </form>
     </div>
+    </div>
 
 </div>
 <form action="/url" method="GET">
     <label for="username"></label>
-        <!-- <input type="text" id="Desc" name="Desc" placeholder="Enter Description"> -->
+        <input type="text" id="Desc" name="Desc" placeholder="Enter Description">
     <button type="submit">Submit</button>  
 </form>
 </body>
