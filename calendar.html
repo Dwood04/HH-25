@@ -150,7 +150,7 @@
     <form onsubmit="return addTodo()">
         <label for="NewToDo"></label>
         <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
-        <input type="date" id="date" name="date">
+        <input type="date" id="date" name="date" name="date" min="2025-03-01" max="2025-03-31" required>
         <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
         <button type="submit">Submit</button>  
     </form>
