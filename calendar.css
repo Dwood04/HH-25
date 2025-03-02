@@ -46,8 +46,8 @@ th {
 
 .task-header {
 
-    
-    padding-left: 100px;
+    padding-right: 10px;
+    position: fixed;
 
 }
 
