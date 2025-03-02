@@ -1,0 +1,322 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HenHacksCalendar</title>
+    <link rel="stylesheet" href="calendar.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .calendar, .task-list {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: hotpink;
+        }
+        .calendar-header, .task-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .calendar-header h2, .task-header h2 {
+            flex: 1;
+            text-align: center;
+        }
+        .hamburger-menu {
+            position: absolute;
+            left: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .date-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .date-btn:hover {
+            background-color: #f1f1f1;
+        }
+        .todo-panel {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .todo-panel:hover {
+            background-color: #f9f9f9;
+        }
+        .todo-header {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border-bottom: 2px solid hotpink;
+        }
+        .todo-desc {
+            margin-bottom: 5px;
+        }
+        .todo-date {
+            text-align: left;
+            font-size: 0.9em;
+            color: gray;
+        }
+        .todo-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .todoList form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .todoList input, .todoList button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .todoList button {
+            background-color: hotpink;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .todoList button:hover {
+            background-color: #ff69b4;
+        }
+        .testButtons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .testButtons button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .testButtons button:hover {
+            background-color: #f1f1f1;
+        }
+        #optionsPanel {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #optionsPanel h3 {
+            margin-top: 0;
+            color: hotpink;
+        }
+        #optionsPanel label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        #optionsPanel input, #optionsPanel textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #optionsPanel button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: hotpink;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #optionsPanel button:hover {
+            background-color: #ff69b4;
+        }
+        #optionsPanel .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+        #optionsPanel .cancel-btn:hover {
+            background-color: #ccc;
+        }
+        .hamburger-menu button {
+            background-color: hotpink;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hamburger-menu-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .hamburger-menu-content select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hamburger-menu-content select:hover {
+            background-color: #f1f1f1;
+        }
+        .hamburger-menu-content button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: hotpink;
+            color: white;
+            cursor: pointer;
+        }
+        .hamburger-menu-content button:hover {
+            background-color: #ff69b4;
+        }
+        .hamburger-menu:hover .hamburger-menu-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="calendar">
+        <h1></h1>
+        <div class="calendar-header">
+            <div class="hamburger-menu">
+                <button>&#9776;</button>
+                <div class="hamburger-menu-content">
+                    <select id="monthSelect" onchange="changeMonthDropdown()">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <select id="yearSelect" onchange="changeYearDropdown()">
+                        <!-- Years will be dynamically generated here -->
+                    </select>
+                </div>
+            </div>
+            <h2 id="calendarHeader">March 2025</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody">
+                <!-- Calendar dates will be dynamically generated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="task-list">
+        <h1></h1>
+        <div class="task-header">
+            <h2 id="taskHeader">Tasks</h2>
+        </div>
+        <div class="todo-list" id="todoOutput"></div>
+        <div class="todoList">
+            <form onsubmit="return addTodo()">
+                <label for="NewToDo"></label>
+                <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
+                <input type="date" id="date" name="date" required>
+                <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
+                <button type="submit">Submit</button>  
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="optionsPanel">
+    <h3>Options for Task</h3>
+    <label for="editTitle">Title:</label>
+    <input type="text" id="editTitle">
+    <label for="editDate">Date:</label>
+    <input type="date" id="editDate">
+    <label for="editDesc">Description:</label>
+    <textarea id="editDesc" oninput="autoResize(this)"></textarea>
+    <button onclick="editTodo()">Save</button>
+    <button onclick="removeTodo()">Delete</button>
+    <button class="cancel-btn" onclick="closeOptions()">Cancel</button>
+</div>
+
+<div class="testButtons">
+    <button onclick="myFunction()">existence test</button>
+    <button onclick="myFunction1()">element test</button>
+    <button onclick="displayAllTodos()">display test</button>
+    <button onclick="changeBackground()">Change Background</button>
+</div>
+
+<script src="calendar.js"></script>
+
+</body>
+</html>
