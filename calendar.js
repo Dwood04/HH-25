@@ -6,18 +6,22 @@ class Todo {
     this.desc = desc;
   }
 }
+
 function addTodo() {
   var title = document.getElementById("todo").value;
   var date = document.getElementById("date").value;
   var desc = document.getElementById("desc").value;
-  var todo = new Todo (title, date, desc);
+  var todo = new Todo(title, date, desc);
   TaskList.push(todo);
+  displayAllTodos();
   return false;
 }
-function removeTodo() {
-  TaskList.pop();
-  return false;
+
+function removeTodo(index) {
+  TaskList.splice(index, 1);
+  displayAllTodos();
 }
+
 function displayAllTodos() {
   var output = document.getElementById("todoOutput");
   if (!output) {
@@ -30,7 +34,8 @@ function displayAllTodos() {
   for (var i = 0; i < TaskList.length; i++) {
     html += "<li><strong>Title:</strong> " + TaskList[i].title + 
             " <strong>Date:</strong> " + TaskList[i].date + 
-            " <strong>Description:</strong> " + TaskList[i].desc + "</li>";
+            " <strong>Description:</strong> " + TaskList[i].desc + 
+            " <button onclick='removeTodo(" + i + ")'>Remove</button></li>";
   }
   html += "</ul>";
   output.innerHTML = html;
