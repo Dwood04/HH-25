@@ -10,12 +10,13 @@
 
 <!-- the div tags are for dividing parts of code -->
 <!-- it makes coding in the css file easier -->
-<div style=""display: flex; gap:20px>
+<div class="container">
 
     <!-- table -->
-    <div>
+    <div class="calendar">
         <h1 style="color: hotpink">HenHacks Calendar</h1>
-        <h2 style="color:hotpink">March 2025</h2>
+        <div class="HELPME"><h2 style="color:hotpink">March 2025</h2></div>
+        
 
 
     <!-- table for the calendar -->
@@ -43,6 +44,8 @@
             <tbody>
 
             <!-- tr is used to enter rows in the table -->
+             <!-- days of the month -->
+             <div>
                 <tr>
 
                 <!-- td is used to enter data in the table -->
@@ -115,27 +118,30 @@
                     <td></td>
 
                 </tr>
+                </div>
 
             </tbody>
 
         </thead>
 
+    <!-- todo list -->
+    </table>
     </div>
 
-    <!-- todo list -->
 
+    <div class="todoList">
     <form action="/url" method="GET">
         <label for="username"></label>
             <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
             <input type="date" id="date" name="date">
         <button type="submit">Submit</button>  
     </form>
-    
-</table>
+    </div>
+
 </div>
 <form action="/url" method="GET">
     <label for="username"></label>
-        <input type="text" id="Desc" name="Desc" placeholder="Enter Description">
+        <!-- <input type="text" id="Desc" name="Desc" placeholder="Enter Description"> -->
     <button type="submit">Submit</button>  
 </form>
 </body>
