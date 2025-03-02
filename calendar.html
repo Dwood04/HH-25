@@ -10,29 +10,27 @@
 
 <!-- the div tags are for dividing parts of code -->
 <!-- it makes coding in the css file easier -->
-<div class="container">
+<div class="calendar">
 
-    <!-- table -->
-    <div class="calendar">
-
-        <h1 style="color: hotpink">HenHacks Calendar</h1>
-        <div class="headers">
+    <h1 style="color: hotpink">Calendar</h1>
+    <div class="headers">
         <div class="calendar-header">
             <h2 style="color:hotpink">March 2025</h2>
         </div>
         <div class="task-header">
             <h2 style="color:hotpink">Tasks</h2>
         </div>
-        </div>
-        
+    </div>
+    
 
+<div class="container">
 
     <!-- table for the calendar -->
     <!-- code below for the table is derived from geeks4geeks -->
         <table bgcolor="white" cellspacing="10" cellpadding="10" >
 
     <!-- thead is used to enter the header of the table -->
-        <thead>
+            <thead>
 
         <!-- tr is used to enter rows in the table -->
             <tr border="1">
@@ -130,57 +128,42 @@
 
             </tbody>
 
-        </thead>
+            </thead>
 
     <!-- todo list -->
-    </table>
+        </table>
+    
+
+    <div class="todo-list">
+
+        <ul id="todoOutput">
+
+        </ul>
+
     </div>
+</div>
+
+</div>
 
 
-    <div class="todoList">
+<div class="todoList">
     <form onsubmit="return addTodo()">
         <label for="NewToDo"></label>
-            <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
-            <input type="date" id="date" name="date">
-            <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
+        <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
+        <input type="date" id="date" name="date">
+        <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
         <button type="submit">Submit</button>  
     </form>
-    </div>
-    </div>
+</div>
 
-</div>
+
 <div class="testButtons">
-<button onclick="myFunction()">existence test</button>
-<button onclick="myFunction1()">element test</button>
-<button onclick="displayAllTodos()">display test</button>
+    <button onclick="myFunction()">existence test</button>
+    <button onclick="myFunction1()">element test</button>
+    <button onclick="displayAllTodos()">display test</button>
 </div>
+
 </body>
 
 <script src="calendar.js"></script>
-
 </html>
-
-<!--
-
-What tasks we can to do
-
-- can add tasks and events, each look different visually
-  when enter
-
-- a way to delete tasks
-
-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
