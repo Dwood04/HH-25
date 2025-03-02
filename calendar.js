@@ -10,23 +10,27 @@ class Todo {
 
 }
 
+
 function addTodo() {
 
   var title = document.getElementById("todo").value;
   var date = document.getElementById("date").value;
   var desc = document.getElementById("desc").value;
-  var todo = new Todo (title, date, desc);
+  var todo = new Todo(title, date, desc);
   TaskList.push(todo);
+  displayAllTodos();
   return false;
 
 }
 
-function removeTodo() {
 
-  TaskList.pop();
-  return false;
+function removeTodo(index) {
+
+  TaskList.splice(index, 1);
+  displayAllTodos();
 
 }
+
 
 function displayAllTodos() {
 
