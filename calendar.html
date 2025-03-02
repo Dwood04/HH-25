@@ -130,20 +130,20 @@
 
 
     <div class="todoList">
-    <form action="/url" method="GET">
-        <label for="username"></label>
+    <form onsubmit="return addTodo()">
+        <label for="NewToDo"></label>
             <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
             <input type="date" id="date" name="date">
+            <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
         <button type="submit">Submit</button>  
     </form>
     </div>
 
 </div>
-<form action="/url" method="GET">
-    <label for="username"></label>
-        <!-- <input type="text" id="Desc" name="Desc" placeholder="Enter Description"> -->
-    <button type="submit">Submit</button>  
-</form>
+<div class="testButtons">
+<button onclick="myFunction()">existence test</button>
+<button onclick="myFunction1()">element test</button>
+</div>
 </body>
 
 <script src="calendar.js"></script>
