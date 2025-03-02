@@ -1,6 +1,8 @@
 h1 {
 
-    align-items: center;
+    display: felx;
+    justify-content: center;
+    text-align: center;
     
 }
 
@@ -40,31 +42,29 @@ th {
 
 .calendar-header {
 
-    padding-left: 238px;
-    position: fixed;
+    padding-left: 240px;
+    text-align: center;
 
 }
 
 .task-header {
 
-    padding-left: 800px;
-    
+    padding-right: 100px;
+    padding-left: 400px;
+    text-align: center;
     
 }
 
 .container {
 
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 
 }
 
 .todo-list{
 
-    width: 350px;
-    padding-left: 200px;
-
+    justify-content: center;
 
 }
 
