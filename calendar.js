@@ -1,5 +1,11 @@
 var TaskList = [];
-
+class Todo {
+  constructor(title, date, desc) {
+    this.title = title;
+    this.date = date;
+    this.desc = desc;
+  }
+}
 function addTodo() {
   var title = document.getElementById("todo").value;
   var date = document.getElementById("date").value;
