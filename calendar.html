@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HenHacksCalendar</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+
+<!-- the div tags are for dividing parts of code -->
+<!-- it makes coding in the css file easier -->
+<div class="calendar">
+
+    <h1 style="color: hotpink">Calendar</h1>
+    <div class="headers">
+        <div class="calendar-header">
+            <h2 style="color:hotpink">March 2025</h2>
+        </div>
+        <div class="task-header">
+            <h2 style="color:hotpink">Tasks</h2>
+        </div>
+    </div>
+    
+
+<div class="container">
+
+    <!-- table for the calendar -->
+    <!-- code below for the table is derived from geeks4geeks -->
+        <table bgcolor="white" cellspacing="10" cellpadding="10" >
+
+    <!-- thead is used to enter the header of the table -->
+            <thead>
+
+        <!-- tr is used to enter rows in the table -->
+            <tr border="1">
+
+            <!-- days of the week as columns -->
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+
+            </tr>
+
+        <!-- tbody is used to enter the body of the table -->
+            <tbody>
+
+            <!-- tr is used to enter rows in the table -->
+             <!-- days of the month -->
+             <div>
+                <tr>
+
+                <!-- td is used to enter data in the table -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="date-btn" onclick="dateClicked(1)">01</button></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><button class="date-btn" onclick="dateClicked(2)">02</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(3)">03</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(4)">04</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(5)">05</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(6)">06</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(7)">07</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(8)">08</button></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><button class="date-btn" onclick="dateClicked(9)">09</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(10)">10</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(11)">11</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(12)">12</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(13)">13</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(14)">14</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(15)">15</button></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><button class="date-btn" onclick="dateClicked(16)">16</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(17)">17</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(18)">18</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(19)">19</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(20)">20</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(21)">21</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(22)">22</button></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><button class="date-btn" onclick="dateClicked(23)">23</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(24)">24</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(25)">25</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(26)">26</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(27)">27</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(28)">28</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(29)">29</button></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><button class="date-btn" onclick="dateClicked(30)">30</button></td>
+                    <td><button class="date-btn" onclick="dateClicked(31)">31</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                </div>
+
+            </tbody>
+
+            </thead>
+
+    <!-- todo list -->
+        </table>
+    
+
+    <div class="todo-list">
+
+        <ul id="todoOutput">
+
+        </ul>
+
+    </div>
+</div>
+
+</div>
+
+
+<div class="todoList">
+    <form onsubmit="return addTodo()">
+        <label for="NewToDo"></label>
+        <input type="text" id="todo" name="todo" minlength="0" maxlength="15" required placeholder="Enter your task here">
+        <input type="date" id="date" name="date" name="date" min="2025-03-01" max="2025-03-31" required>
+        <input type="text" id="desc" name="desc" minlength="0" maxlength="50" required placeholder="Enter a description">
+        <button type="submit">Submit</button>  
+    </form>
+</div>
+
+
+<div class="testButtons">
+    <button onclick="myFunction()">existence test</button>
+    <button onclick="myFunction1()">element test</button>
+    <button onclick="displayAllTodos()">display test</button>
+</div>
+
+</body>
+
+<script src="calendar.js"></script>
+</html>

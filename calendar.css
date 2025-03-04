@@ -1,0 +1,92 @@
+h1 {
+
+    display: felx;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+body{
+
+    /* bet you cant guess what this does */
+    background-color: pink;
+
+}
+
+/* for the calendar table */
+table {
+
+    border-collapse: collapse;
+    background-color:rgb(253, 231, 247);
+    color: black;
+    align-content: center;
+    margin-right: auto;
+
+}
+
+th {
+
+    background-color: rgb(253, 231, 247);
+    color: black;
+
+}
+
+.headers {
+
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+
+}
+
+.calendar-header {
+
+    padding-left: 240px;
+    text-align: center;
+
+}
+
+.task-header {
+
+    padding-right: 100px;
+    padding-left: 400px;
+    text-align: center;
+    
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between; 
+
+}
+
+.todo-list{
+
+    justify-content: center;
+
+}
+
+.calendar{
+
+    margin-right: 20px;
+
+}
+
+.date-btn {
+
+    background-color: rgb(253, 231, 247);
+    border-color: black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:grid;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+
+}
