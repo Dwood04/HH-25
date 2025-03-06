@@ -120,7 +120,7 @@ function updateCalendarColors() {
       var day = taskDate.getUTCDate();
       var button = document.querySelector(`.date-btn[onclick='dateClicked(${day})']`);
       if (button) {
-        button.style.backgroundColor = "rgba(255, 105, 180, 0.3)"; // Slight pink tint
+        button.style.backgroundColor = "rgba(255, 105, 180, 0.3)"; // Is it bubble gum pink?
       }
     }
   });
